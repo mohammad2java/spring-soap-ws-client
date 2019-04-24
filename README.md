@@ -53,16 +53,16 @@ create  child class of WebServiceGatewaySupport to call the soap operation<br>
 
 Example:
 -----
-public class SoapClientService extends WebServiceGatewaySupport {	
-	@SuppressWarnings("unchecked")
-	public <T> T  callSoapService(String location,String soapAction,Object request) {
-		 T ret =  null;
-		 WebServiceTemplate webServiceTemplate = getWebServiceTemplate();
-		 SoapActionCallback soapActionCallback = new SoapActionCallback(soapAction);
-		 ret = (T) webServiceTemplate.marshalSendAndReceive(location, request, soapActionCallback);
-		 return ret;
+	public class SoapClientService extends WebServiceGatewaySupport {	
+		@SuppressWarnings("unchecked")
+		public <T> T  callSoapService(String location,String soapAction,Object request) {
+			 T ret =  null;
+			 WebServiceTemplate webServiceTemplate = getWebServiceTemplate();
+			 SoapActionCallback soapActionCallback = new SoapActionCallback(soapAction);
+			 ret = (T) webServiceTemplate.marshalSendAndReceive(location, request, soapActionCallback);
+			 return ret;
+		}
 	}
-}
 
 location --you can get from wsdl it is value of <soap:address..><br>
 soapAction --you can get from wsdl it is valie of <soap:operation..><br>
