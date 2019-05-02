@@ -32,10 +32,10 @@ private static String STUDENT_ADDRESS_LOCATION="http://localhost:8088/ws/service
 	
 	public String getCountry(String name)  {
 		String ret = "";
-		String soapAction="http://www.example.org/demo/findCountryRequest";
+		//String soapAction="http://www.example.org/demo/findCountryRequest";
 		FindCountryRequest req =  new FindCountryRequest();
 		req.setName("India");
-		FindCountryResponse response = soapClientService.callSoapService(STUDENT_ADDRESS_LOCATION,null,req);
+		FindCountryResponse response = soapClientService.callSpringSoapService(STUDENT_ADDRESS_LOCATION,req);
 		ret = response.getCountry().toString();
 		return ret;
 	}

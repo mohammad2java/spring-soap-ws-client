@@ -18,5 +18,14 @@ public class SoapClientService extends WebServiceGatewaySupport {
 	}
 	
 	
+	@SuppressWarnings("unchecked")
+	//soapAction is not required at all in case Spring-Soap is a producer.
+	public <T> T  callSpringSoapService(String location,Object request) {
+		 T ret =  null;
+		 WebServiceTemplate webServiceTemplate = getWebServiceTemplate();
+		 ret = (T) webServiceTemplate.marshalSendAndReceive(location, request);
+		 return ret;
+	}
 
+	
 }
