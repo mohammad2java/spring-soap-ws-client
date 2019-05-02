@@ -20,6 +20,8 @@ public class SpringSoapConsumeDemoApplication implements CommandLineRunner {
 		System.out.println("staretd....");
 		int addTwoNumber2 = calculatorServiceClient.addTwoNumber(20, 30);
 		System.out.println(addTwoNumber2);
+		String currency = calculatorServiceClient.getCountry("India");
+		System.out.println(currency);
 		System.out.println("end....");
 	}
 

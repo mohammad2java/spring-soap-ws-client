@@ -72,9 +72,10 @@
 						</goals>
 						<configuration>
 							<wsdlUrls>
-								<wsdlUrl>http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL</wsdlUrl>
+								<wsdlUrl>http://localhost:8088/ws/services/students.wsdl</wsdlUrl>
 							</wsdlUrls>
-							<packageName>weather.client</packageName>
+							<packageName>com.amir.student</packageName>
+							<!-- <packageName>com.student</packageName> -->
 						</configuration>
 
 					</execution>
