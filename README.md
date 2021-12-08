@@ -104,10 +104,11 @@ how to call soap webservice using postman
 --------------------------------------------
 1) create post request with wsdl endpoint
 example: http://www.dneonline.com/calculator.asmx?WSDL
-2) create body with soap request with content-type: text/xml
+2) create body with soap request with content-type: raw & xml
 3) create 1 header attribute name will be "SOAPAction"
 example: SOAPAction=http://tempuri.org/Add
-4) hit the request 
+4) set content-type = text/xml
+hit the post request.
 
 
 
